@@ -1,0 +1,5 @@
+.vercel
+app
+fe/build
+**/node_modules/*
+**/package-lock.json

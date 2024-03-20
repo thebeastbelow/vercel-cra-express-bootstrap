@@ -1,0 +1,19 @@
+{
+  "name": "express_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "nodemon --ignore fe/ api/index.js",
+    "dev-client": "cd fe && npm start",
+    "dev": "conc \"npm:dev-*\"",
+    "local": "rm -rf app && cd fe && npm install && npm run local && cd .. && cp -R fe/build app && npm run dev-server",
+    "deploy": "rm -rf app && cd fe && npm install && npm run build && cd .. && cp -R fe/build app && vercel"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
